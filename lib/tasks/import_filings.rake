@@ -17,6 +17,11 @@ namespace :filings do
         ThirteenF.import_filings!(filing_year: y, filing_quarter: q)
       end
 
-    puts "#{Time.zone.now}: all 13F forms imported, but you'll need to process them to fetch all of the holdings data"
+    puts "#{Time.zone.now}: all 13F forms imported. Processing started..."
+
+    ThirteenF.process_unprocessed_filings!
+
+    puts "#{Time.zone.now}: all 13F forms processed. You can start the delayed job worker."
   end
+  
 end

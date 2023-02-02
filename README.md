@@ -1,5 +1,7 @@
 # SEC 13F Filings
 
+Forked from: [Todd's repo](https://github.com/toddwschneider/sec-13f-filings). Thank's for your work! 
+
 The code for [13f.info](https://13f.info), a more user-friendly way to view [SEC 13F filings](https://www.sec.gov/divisions/investment/13ffaq.htm)—the quarterly reports that list certain equity assets held by institutional investment managers
 
 The Rails app has two primary functions:
@@ -54,6 +56,7 @@ The app is a fairly standard Ruby on Rails app. Its primary dependencies include
 - PostgreSQL
 - Node.js
 - Yarn
+- - for yarn to work on windows you need to set python2 from the ms-toolbox in your path: "C:\Users\[Your..User]\.windows-build-tools\python27\"
 
 Setting up each of these is beyond the scope of this readme, but if you don't know where to begin, I'd recommend the official [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html) guide. A future improvement to this repo could be to include a Docker container to help with environment setup
 
@@ -79,6 +82,7 @@ There are a few materialized views that are calculated from the above tables and
 
 ### Populate database with 13F data
 
+First of all: do not forget to identify your 'User-Agent' to the SEC, (see [SEC Info](https://www.sec.gov/os/accessing-edgar-data). 
 There are a few ways to populate data. The simplest is to use the provided [`MinimalDbSeeder`](app/lib/minimal_db_seeder.rb) class, which will import and process recent filings from a handful of investment managers
 
 ```sh

@@ -13,12 +13,16 @@ gem 'foreman', '~> 0.87'
 gem 'hashie', '~> 4.1'
 gem 'httparty', '~> 0.18'
 gem 'kaminari', '~> 1.2'
-gem 'nokogiri', '~> 1.11'
-gem 'pg', '~> 1.1'
+gem 'nokogiri', '~> 1.6'
+gem 'pg', '~> 1.4'
 gem 'puma', '~> 5.0'
 gem 'rack-timeout', '~> 0.6'
 gem 'scenic', '~> 1.5'
 gem 'webpacker', '~> 5.0'
+gem 'sys-proctable', '~> 1.3'
+gem 'wdm', '>= 0.1.0'
+gem 'rexml', '~> 3.2.5'
+gem "daemons", "~> 1.4.1"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
